@@ -1,0 +1,252 @@
+.container-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('/assets/images/authorise_bg.jpg');
+
+    &:before {
+      content: "";
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: linear-gradient(rgba(57, 43, 149, .7), rgba(159, 87, 187, 1));
+      filter: blur(5px);
+    }
+}
+
+.form-control {
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.signup {
+
+  &__button {
+   display: block;
+   font-size: 13px;
+   padding: 10px 65px;
+   border-radius: 6px;
+   color: white;
+
+   background: linear-gradient(45deg, rgba(143, 41, 233, 0.8), rgba(143, 41, 234, 1));
+
+   &--facebook {
+     background: rgba(62, 92, 148, 1);
+     &:hover {
+       background: rgba(52, 82, 138, 1);
+     }
+   }
+
+   &--google {
+     background: rgba(18, 123, 190, 1);
+     &:hover {
+       background: rgba(8, 113, 180, 1);
+     }
+   }
+ }
+
+  &__container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 25px;
+        margin-top: 10px;
+        button {
+          margin-bottom: 8px;
+          &:last-of-type {
+            margin-bottom: 0px;
+          }
+        }
+  }
+
+  &__logo {
+
+    display: block;
+
+    background: url('/assets/images/logo.png');
+    background-size: cover;
+
+    width: 128px;
+    height: 128px;
+  }
+
+  &__signin-link {
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+    a {
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+    }
+  }
+
+  &__submit-button {
+    display: block;
+    color: white;
+    font-size: 12px;
+    padding: 10px 65px;
+    border-radius: 6px;
+    background: linear-gradient(45deg, rgba(143, 41, 233, 0.8), rgba(143, 41, 234, 1));
+    &:hover {
+      background: linear-gradient(45deg, rgba(133, 31, 223, 0.8), rgba(133, 31, 224, 1));
+    }
+  }
+
+  &-container {
+    overflow: hidden;
+    overflow-wrap: break-word;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 360px;
+    transform: translate3d(-50%, -50%, 0);
+
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  &-form {
+
+    padding: 25px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    // 155, 99, 233
+    // background: linear-gradient(270deg, rgba(94, 76, 230, .6) 20%, rgba(218, 130, 235, .3) 80%);
+    background: linear-gradient(145deg, rgba(94, 76, 230, .6) 20%, rgba(155, 99, 233, .3) 80%);
+
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      border: none;
+      padding: 6px 0px;
+      width: 190px;
+      font-size: 13px;
+
+      background: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 1);
+      color: rgba(255, 255, 255, 0.75);
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+    }
+  }
+
+  &-splashscreen {
+    position: relative;
+    min-width: 440px;
+    max-width: 800px;
+    // background: linear-gradient(135deg, rgba(105, 67, 187, .8), rgba(171, 100, 204, .8));
+
+    &:after {
+      position: absolute;
+      background: url('/assets/images/authorise_bg1.png');
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      background-size: 100% auto;
+
+      transform: rotate(45deg);
+
+      opacity: 0.55;
+      bottom: -200px;
+      right: -200px;
+
+      content: "";
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}
+
+/* autofilled stylization */
+.signup-container input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    // -webkit-text-fill-color: #000000;
+    // caret-color: #eee;
+    // transition: background-color 9999s ease-in-out 0s;
+}
+
+.signup__title {
+    margin-bottom: 10px;
+    line-height: 27px;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: center;
+
+    padding-top: 10px;
+
+    color: rgb(255, 255, 255);
+}
+
+.message {
+  color: rgb(230, 227, 91);
+  font-size: 14px;
+}
+
+.signup__submit {
+    display: block;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 20px;
+    outline: none;
+    border: none;
+    background: #69f;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: .25s ease;
+}
+
+.signin-anchor {
+    display: block;
+    margin: 20px auto 0;
+    width: 80%;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #69f;
+    border-bottom: 1px solid rgba(102,153,255,.3);
+    transition: all .25s ease;
+}

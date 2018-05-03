@@ -1,0 +1,19 @@
+# --- !Ups
+
+INSERT INTO `CURRENT_STATUS` (ACTIVE, DESCRIPTION, STATUS_KEY, STATUS_VALUE) VALUES (1, 'User not confirmed.', 'user', 'emailNotConfirmed'), (1, 'User confirmed.', 'user', 'emailConfirmed');
+
+INSERT INTO `USER_ROLE` (ACTIVE, DESCRIPTION, ROLE_NAME, SELECTABLE) VALUES (1, 'Administrator', 'admin', 1), (1, 'General user', 'user', 1);
+
+INSERT INTO `USER_PERMISSION`
+  (ROLE_ID, ACTIVE, READ_PERM, WRITE_PERM, EXECUTE_PERM)
+    SELECT ROLE0.`ID`, 1, 1, 1, 1
+      FROM USER_ROLE ROLE0
+        WHERE ROLE0.`ROLE_NAME`='admin';
+
+INSERT INTO `USER_PERMISSION`
+  (ROLE_ID, ACTIVE, READ_PERM, WRITE_PERM, EXECUTE_PERM)
+    SELECT ROLE0.`ID`, 1, 1, 1, 1
+      FROM USER_ROLE ROLE0
+        WHERE ROLE0.`ROLE_NAME`='user';
+
+# --- !Downs

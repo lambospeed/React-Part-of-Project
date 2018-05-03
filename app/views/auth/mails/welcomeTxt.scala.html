@@ -1,0 +1,11 @@
+@(appName: String, name: String, link: String)(implicit messages: Messages)
+@Messages("mail.welcome.hello", name)
+
+@Messages("mail.welcome.instructions")
+
+@link
+
+@Messages("mail.welcome.endInstructions", appName)
+
+Thanks,
+  The @appName team

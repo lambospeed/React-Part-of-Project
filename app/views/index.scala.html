@@ -1,0 +1,7 @@
+@()(implicit configuration: play.api.Configuration)
+
+@headerContent = {
+}
+
+@main("Welcome to " + configuration.get[String]("application.name"))(headerContent) {
+}

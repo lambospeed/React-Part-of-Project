@@ -1,0 +1,48 @@
+.map {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url('/assets/images/authorise_bg.jpg');
+
+  &:before {
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(rgba(57, 43, 149, .7), rgba(159, 87, 187, 1));
+    filter: blur(5px);
+  }
+}
+
+.map-header {
+  position: relative;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+.map-title {
+  font-size: 1.5em;
+}
+button:focus {
+  border: none;
+  outline: none;
+}
+button {
+  background: #03A9F4;
+  border: none;
+  cursor: pointer;
+  margin: 4px 4px;
+  color: white;
+  font-weight: 900;
+  padding: 5px 5px;
+  border-radius: 2px;
+  transition: all .5s;
+}
+button:hover {
+  background: #0c7fb3; 
+}
+button.active {
+  background: #0a5c82; 
+}
